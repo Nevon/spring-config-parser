@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "js-yaml": "^3.8.4",
-    "ramda": "^0.24.1"
+    "ramda": "^0.24.1",
+    "yargs": "^8.0.2"
   },
   "jest": {
     "verbose": true,
