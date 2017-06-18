@@ -1,0 +1,38 @@
+{
+  "name": "spring-config-parser",
+  "version": "1.0.0",
+  "description": "Application for parsing spring configuration files",
+  "main": "index.js",
+  "repository": "https://github.com/Nevon/spring-configuration-parser",
+  "author": "Tommy Brunn <tommy.brunn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "NODE_ENV=test jest /__tests__/",
+    "test:static-analysis": "npm run lint",
+    "test:watch": "npm run test -- --watch",
+    "lint": "prettier-check {__tests__,src}/**/*.js index.js",
+    "format": "prettier --write {__tests__,src}/**/*.js index.js",
+    "debug": "node debug --harmony ./node_modules/jest-cli/bin/jest.js --runInBand -i",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "lint-staged": "^4.0.0",
+    "prettier": "^1.4.4",
+    "prettier-check": "^1.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^3.8.4",
+    "ramda": "^0.24.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

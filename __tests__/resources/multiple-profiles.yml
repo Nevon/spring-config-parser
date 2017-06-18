@@ -1,0 +1,33 @@
+spring:
+  profiles:
+      active: common
+  common:
+    properties:
+      foo: foo
+      bar: bar
+
+top-level-properties:
+  foo: foo
+  bar: bar
+  baz: baz
+
+---
+spring:
+    profiles: local
+    specific-to-local: local
+
+top-level-properties:
+  foo: local
+
+only-local: true
+
+---
+
+spring:
+    profiles: other
+    specific-to-other: other
+
+top-level-properties:
+  bar: other
+
+only-other: true
