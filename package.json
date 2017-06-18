@@ -7,7 +7,7 @@
   "author": "Tommy Brunn <tommy.brunn@gmail.com>",
   "license": "MIT",
   "bin": {
-    "parse-spring-config": "./bin/cli.js"
+    "spring-config": "./bin/cli.js"
   },
   "scripts": {
     "test": "NODE_ENV=test jest /__tests__/",
