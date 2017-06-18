@@ -1,6 +1,6 @@
 {
   "name": "spring-config-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Application for parsing spring configuration files",
   "main": "index.js",
   "repository": "https://github.com/Nevon/spring-configuration-parser",
