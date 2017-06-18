@@ -6,12 +6,15 @@
   "repository": "https://github.com/Nevon/spring-configuration-parser",
   "author": "Tommy Brunn <tommy.brunn@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "parse-spring-config": "./bin/cli.js"
+  },
   "scripts": {
     "test": "NODE_ENV=test jest /__tests__/",
     "test:static-analysis": "npm run lint",
     "test:watch": "npm run test -- --watch",
-    "lint": "prettier-check {__tests__,src}/**/*.js index.js",
-    "format": "prettier --write {__tests__,src}/**/*.js index.js",
+    "lint": "prettier-check {__tests__,src,bin}/**/*.js index.js",
+    "format": "prettier --write {__tests__,src,bin}/**/*.js index.js",
     "debug": "node debug --harmony ./node_modules/jest-cli/bin/jest.js --runInBand -i",
     "precommit": "lint-staged"
   },
