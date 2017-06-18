@@ -14,8 +14,8 @@
     "test:unit": "NODE_ENV=test jest /__tests__/",
     "test:unit:watch": "npm run test -- --watch",
     "test:static-analysis": "npm run lint",
-    "lint": "prettier-check {__tests__,src,bin}/**/*.js index.js",
-    "format": "prettier --write {__tests__,src,bin}/**/*.js index.js",
+    "lint": "prettier-check {__tests__,src}/**/*.js index.js",
+    "format": "prettier --write {__tests__,src}/**/*.js index.js",
     "debug": "node debug --harmony ./node_modules/jest-cli/bin/jest.js --runInBand -i",
     "precommit": "lint-staged"
   },
