@@ -10,9 +10,10 @@
     "spring-config": "./bin/cli.js"
   },
   "scripts": {
-    "test": "NODE_ENV=test jest /__tests__/",
+    "test": "npm run test:static-analysis && npm run test:unit",
+    "test:unit": "NODE_ENV=test jest /__tests__/",
+    "test:unit:watch": "npm run test -- --watch",
     "test:static-analysis": "npm run lint",
-    "test:watch": "npm run test -- --watch",
     "lint": "prettier-check {__tests__,src,bin}/**/*.js index.js",
     "format": "prettier --write {__tests__,src,bin}/**/*.js index.js",
     "debug": "node debug --harmony ./node_modules/jest-cli/bin/jest.js --runInBand -i",

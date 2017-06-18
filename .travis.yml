@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - node
+  - lts/*
+cache: yarn
+env:
+  - STAGE=static-analysis
+  - STAGE=unit
+script: "npm run test:$STAGE"
+deploy:
+  provider: npm
+  email: tommy.brunn@gmail.com
+  api_key:
+    secure: "exKNXxglJkrEM77r3CmJ7onuSVQiYkJQR0evfH6QpWFIL4QBsUQE14kO1EbqqfqinSfQmIgDpX+gTuGxmBRkb7/MgnnscAONNWcXi8+G2IzwGrrxRzg0nM9HUG41u5GIHaT0JvqFn7uK760OfUAAGeNBZnXk7LnAMIn1aMV6vwAVQHIL3tj4mmTeDkRGrgZiWLvNUyTLhHtJTX633L4z5nYrM5OMF23IDhPuwaMWvJ+AzsPSoNMQlpEFS6T/Kn4AHzzpzYZ0XbJLSBQbIR7dV7cMUKhZdiMCMZvSreAWPKrsezsegGIEWYGq4LplJfggJ2L6WfrXM6ovWbrqASG/3MB7heG6RsVcqJVtRLTBYaxGi8SPuZZRPMIvYfc7gDxh5UWkND7m5I3TPF8m0lq+4TrGwYmwjDsQwhX2lv2mQpW6MP5vtnOHIlbGz7cjb/OqujDwhrhK8cIHaSHeWawrokjdcG34DwIq/f7CeXE8TEzwJs8Dal4vO+NqPuvtBk8qitHTYqIk16ei699M5/t2BWEsMojP2vu0HkSvQQydeq56jH2iMMon5y5h3jfO3q1WlKkR0nbjF0TB2R73YfDR5mITWYH2DYTBkjv5fjvdeCI8hPd1LgP40xrn7MOnLHi/x3YqpA4UsZRSfIaD99KuKFsDONAZZ8L2D17LA7PbbNw="
+  on:
+    tags: true
+    repo: Nevon/spring-config-parser
